@@ -9,8 +9,6 @@ set(OpenCV_DIR C:/opencv/build)
 
 find_package(OpenCV REQUIRED)
 
-# Added executable for imgDisplay.cp
-
 add_executable(detectCorners src/detectCorners.cpp)
 target_link_libraries(detectCorners ${OpenCV_LIBS})
 
@@ -28,3 +26,15 @@ target_link_libraries(projectAxes ${OpenCV_LIBS})
 
 add_executable(createObject src/createObject.cpp src/functions.cpp)
 target_link_libraries(createObject ${OpenCV_LIBS})
+
+add_executable(detectHarrisCorners src/detectHarrisCorners.cpp src/functions.cpp)
+target_link_libraries(detectHarrisCorners ${OpenCV_LIBS})
+
+add_executable(detectAROverlay src/detectAROverlay.cpp src/functions.cpp)
+target_link_libraries(detectAROverlay ${OpenCV_LIBS})
+
+add_executable(detectMultipleTargets src/detectMultipleTargets.cpp src/functions.cpp)
+target_link_libraries(detectMultipleTargets ${OpenCV_LIBS})
+
+add_executable(detectMultipleDiffTargets src/detectMultipleDiffTargets.cpp src/functions.cpp)
+target_link_libraries(detectMultipleDiffTargets ${OpenCV_LIBS})

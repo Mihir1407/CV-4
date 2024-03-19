@@ -1,11 +1,23 @@
+// calibrateCamera.cpp
+// Author: Aditya Gurnani, Mihir Chitre
+// Date: 03/19/2024
+// Description: This interactive program captures video from a webcam to perform camera calibration using a chessboard pattern. It allows the user to capture
+//              frames interactively by pressing 's' when a chessboard is correctly detected and positioned within the frame. The calibration process begins
+//              automatically once a sufficient number of frames (at least 5) have been captured. 
+
 #include <opencv2/opencv.hpp>
 #include <iostream>
 #include <vector>
 #include <fstream>
 #include "functions.h"
 
+/*
+   Function: main
+   Purpose: It captures frames from a webcam, detects chessboard corners, and performs camera calibration with the captured frames.
+   Returns: 0 on successful execution, 1 if an error occurs (e.g., camera not opening).
+*/
 int main() {
-    cv::VideoCapture capture(0);
+    cv::VideoCapture capture(1);
     if (!capture.isOpened()) {
         std::cerr << "ERROR: Could not open camera" << std::endl;
         return 1;

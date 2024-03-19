@@ -1,3 +1,10 @@
+// functions.h
+// Author: Aditya Gurnani, Mihir Chitre
+// Date: 03/19/2024
+// Description: This header file declares a set of utility functions used across various computer vision tasks, particularly in camera calibration and augmented reality (AR) applications. 
+//              Functions include generating 3D representations of chessboard corners, writing point data to CSV files, performing camera calibration, reading saved calibration parameters, 
+//              and constructing basic 3D shapes (blocks and cylinders) for visualization and AR purposes.
+
 #include <opencv2/opencv.hpp>
 #include <iostream>
 #include <vector>
